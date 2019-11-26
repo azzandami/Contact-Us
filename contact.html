@@ -9,7 +9,10 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assest/cs/bootstrap.min.css">
+        <link rel="stylesheet" href="./assest/cs/animate.css">
         <link rel="stylesheet" href="./assest/cs/contact.css">
+        <link rel="stylesheet" href="./contact.html">
     </head>
     <body>
         
@@ -31,20 +34,87 @@
         <p>info@easyconnect.org</p>
         <br>
         <p>Tel:080558522</p>
-        <img src="./assest/images/instagram icon.jfif"> <img src="./assest/images/fb logo 2.png"> <img src="./assest/images/twitter logo.png">
+        <div class="image">
+            <img src="./assest/images/facelogo.png" class="img1">
+            <img src="./assest/images/tagram logo.jfif" class="img1" > 
+            <img src="./assest/images/twit logo.png" class="img1">
+        </div>
+        <button type="button" class="btn btn-outline-primary">Facebook</button>
+        <button type="button" class="btn btn-outline-danger">Instagram</button>
+        <button type="button" class="btn btn-outline-primary">Twitter</button>
         </P>
 
         <br>
 
+        <form>
+            <div class="form-row 1">
+                <div class="col-md-3 mb-4">
+                    <label for="validationDefault01"> First name</label>
+                    <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+                </div>
+            <div class="col-md-3 mb-4">
+                    <label for="validationDefault02"> Last name</label>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                    <label for="validationDefault03"> Location</label>
+                    <input type="text" class="form-control" id="validationDefault03" placeholder="Location" required>
+            </div>
+            </div>
+            <br>
 
-        <p class="FORM">
-        <p>Name <input type= "text"></p>
-        <p>E-mail <input type="text"></p>
-        <p>Phone number <input type="tel"></p>
-        <p>Subject <input type="text"></p>
-        <p>Message <input type="text"></p>
-        <button>send </button>
-        </p>
+
+            <div class="form row 2">
+                <div class="col-md-3 mb-4">
+                    <label for="validationDefault03"> E-mail</label>
+                    <input type="text" class="form-control" id="validationDefault03" placeholder="E-mail" required>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="validationDefault03"> Phone</label>
+                    <input type="tel" class="form-control" id="validationDefault03" placeholder="Phone" required>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="validationDefault03"> Subject</label>
+                    <input type="text" class="form-control" id="validationDefault03" placeholder="Subject" required>
+                </div>
+            </div>
+            <br>
+            <form class="was-validated">
+                    <div class=" col-md-8 mb-3">
+                      <label for="validationTextarea">Message</label>
+                      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required Message" required></textarea>
+                      <div class="invalid-feedback">
+                        Please enter a message in the box.
+                      </div>
+                    </div>
+
+
+
+            
+                <button class="btn btn-primary" type="send">Send</button>
+                </form>
+                
+                <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                  'use strict';
+                  window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                      form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                      }, false);
+                    });
+                  }, false);
+                })();
+                </script>
+        
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
